@@ -17,7 +17,9 @@ if __name__ == "__main__":
             nums = list(map(int, input().split()))
         except EOFError:
             break
-        nums.pop(0)
+        
+        if len(nums) > 1:
+            nums.pop(0)
 
         nums = count_sort(nums)
         print(' '.join(map(str, nums)))
