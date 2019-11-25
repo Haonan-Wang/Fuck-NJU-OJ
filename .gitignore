@@ -1,7 +1,7 @@
-.vscode
-__pycache__
-input.txt
-output.txt
 *.c
 *.cpp
 *.java
+__pycache__
+input.txt
+output.txt
+.vscode
