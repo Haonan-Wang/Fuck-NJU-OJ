@@ -2,3 +2,6 @@
 __pycache__
 input.txt
 output.txt
+*.c
+*.cpp
+*.java
