@@ -11,19 +11,13 @@ def dp(i, j):
         return d[(i, j)]
 
     point = points[i * c + j]
-    if i == r - 1 and j == c - 1:
-        if point >= 0:
-            min_point = 1
-        else:
-            min_point = 1 - point
-        d[(i, j)] = min_point
-        return min_point
-
     min_point = math.inf
     if i < r - 1:
         min_point = min(dp(i + 1, j), min_point)
     if j < c - 1:
         min_point = min(dp(i, j + 1), min_point)
+    if min_point == math.inf:
+        min_point = 1
     min_point = max(1, min_point - point)
 
     d[(i, j)] = min_point
