@@ -1,3 +1,19 @@
+"""
+非递归合并排序
+Description
+
+合并（归并）排序的核心思想是：每次从中间位置将数组分组再分别排序。请实现其非递归方案。
+
+
+Input
+
+输入的每一行表示一个元素为正整数的数组，所有值用空格隔开，第一个值为数值长度，其余为数组元素值。
+
+
+Output
+
+输出的每一行为排序结果，用空格隔开，末尾不要空格。
+"""
 def merge(nums, begin, mid, end):
     left_cur, right_cur = begin, mid + 1
     merged_nums = []
