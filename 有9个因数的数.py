@@ -1,3 +1,35 @@
+"""
+有9个因数的数
+Description
+
+Find the count of numbers less than N having exactly 9 divisors
+找出小于9的N个正整数
+1<=T<=1000,1<=N<=10^12
+
+
+Input
+
+First Line of Input contains the number of testcases. Only Line of each testcase contains the number of members N in the
+rival gang.
+
+
+Output
+
+Print the desired output.
+
+
+Sample Input 1
+
+2
+40
+5
+Sample Output 1
+
+1
+0
+"""
+
+
 if __name__ == '__main__':
     # 筛选法
     arr = [0] * (10 ** 6)
