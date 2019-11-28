@@ -1,3 +1,25 @@
+'''
+Description
+
+Given a set of n jobs where each job i has a deadline and profit associated to it. Each job takes 1 unit of time to complete and only one job can be scheduled at a time. We earn the profit if and only if the job is completed by its deadline. The task is to find the maximum profit and the number of jobs done.
+
+给定一组n个作业，其中每个作业都有一个截止日期和相关的利润。每个作业需要1个时间单位才能完成，一次只能安排一个作业。只有工作在截止日期前完成，我们才能获得利润。任务是找到最大的利润和完成的工作的数量。
+
+Input
+
+The first line of input contains an integer T denoting the number of test cases.Each test case consist of an integer N denoting the number of jobs and the next line consist of Job id, Deadline and the Profit associated to that Job.
+
+Constraints:1<=T<=100，1<=N<=100，1<=Deadline<=100，1<=Profit<=500
+
+
+Output
+
+Output the number of jobs done and the maximum profit.
+
+
+'''
+
+
 class DisjointSet:
     def __init__(self, n):
         self.parent = [i for i in range(n + 1)]
