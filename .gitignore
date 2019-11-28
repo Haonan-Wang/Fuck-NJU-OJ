@@ -1,6 +1,3 @@
-*.c
-*.cpp
-*.java
 __pycache__
 input.txt
 output.txt
