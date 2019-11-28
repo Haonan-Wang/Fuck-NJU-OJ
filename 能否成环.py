@@ -1,3 +1,54 @@
+"""
+Description
+
+Given an array of strings A[ ], determine if the strings can be chained together to form a circle.
+A string X can be chained together with another string Y if the last character of X is same as first character of Y.
+If every string of the array can be chained, it will form a circle. For example,
+for the array arr[] = {"for", "geek", "rig", "kaf"} the answer will be Yes as the given strings can be chained as "for", "rig", "geek" and "kaf".
+
+
+描述
+
+给定字符串A []的数组，确定字符串是否可以链接在一起形成一个圆。 如果X的最后一个字符与Y的第一个字符相同，则字符串X可以与另一个字符串Y链接在一起
+如果数组的每个字符串都可以链接，它将形成一个圆。 例如，对于数组arr [] = {“ for”，“ geek”，“ rig”，“ kaf”}，答案将是“是”，因为给定的字符串可以链接为“ for”，“ rig”，“ geek” ”和“ kaf”。
+
+
+Input
+
+The first line of input contains an integer T denoting the number of test cases. Then T test cases follow.
+
+The first line of each test case contains a positive integer N, denoting the size of the array.
+
+The second line of each test case contains a N space seprated strings, denoting the elements of the array A[ ].
+
+1 <= T
+
+0 < N
+
+0 < A[i]
+
+
+Output
+
+If chain can be formed, then print 1, else print 0.
+
+
+Sample Input 1 
+
+2
+3
+abc bcd cdf
+4
+ab bc cd da
+
+
+Sample Output 1
+
+0
+1
+"""
+
+
 from collections import defaultdict
 
 

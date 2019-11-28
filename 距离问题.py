@@ -13,9 +13,11 @@ Euclidean Distance = ((x2-x1)^2 + (y2-y1)^2)^0.5 where points are (x1,y1) and (x
 
 Constraints:1<=T <= 50, 1<=N <= 2*10 ^ 5, 0<=(|Xi|, |Yi|) <= 10^9
 
+
 描述
 
 在给定的笛卡尔平面中，有N个点。 我们需要找到点对（A，B）的对数，以使点A和点B不重合。 点之间的曼哈顿距离和欧几里得距离应相等。
+
 
 Input
 
@@ -34,6 +36,8 @@ Sample Input 1
 2
 1 1
 7 5
+
+
 Sample Output 1
 
 0
