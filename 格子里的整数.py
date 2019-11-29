@@ -43,4 +43,41 @@ Sample Output 1
 
 
 if __name__ == "__main__":
-    pass
+    T = int(input())
+    for _ in range(T):
+        N = int(input())
+        arr = list(map(int, input().split()))
+        V = len(arr)
+        edge_list = []
+        for i in range(V):
+            if i % N != 0:
+                edge_list.append([(i, i - 1), arr[i - 1]])
+            if (i + 1) % N != 0:
+                edge_list.append([(i, i + 1), arr[i + 1]])
+            if (i - N) >= 0:
+                edge_list.append([(i, i - N), arr[i - N]])
+            if (i + N) < (N * N):
+                edge_list.append([(i, i + N), arr[i + N]])
+
+        dist = dict()
+        dist[0] = arr[0]
+        par = dict()
+        par[0] = None
+        for i in range(1, V):
+            dist[i] = float('inf')
+
+        change = True
+        ite = 0
+        while ite < (V - 1) and change:
+            change = False
+            for edge, wt in edge_list:
+                u = edge[0]
+                v = edge[1]
+
+                if dist[v] > (dist[u] + wt):
+                    dist[v] = dist[u] + wt
+                    par[v] = u
+                    change = True
+            ite += 1
+
+        print(dist[V - 1])
