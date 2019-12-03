@@ -33,7 +33,6 @@ YES 36
 
 
 if __name__ == '__main__':
-
     for _ in range(int(input())):
         n, h, p = list(map(int, input().strip().split()))  # 最大耗时就是最大容量
         h_arr = []  # 耗时  耗时作为重量
@@ -53,7 +52,7 @@ if __name__ == '__main__':
                     dp[i][j] = max(op_add, op_not)
                 else:  # 不能放
                     dp[i][j] = dp[i - 1][j]
-                if dp[i][j] >= 21:  # 如果满足了条件,则记录当前时间
+                if dp[i][j] >= p:  # 如果满足了条件,则记录当前时间
                     min_tar = min(min_tar, j)
         if dp[-1][-1] < p:
             print("NO")
